@@ -1,4 +1,6 @@
 class DataSnippetsController < ApplicationController
+  protect_from_forgery :except => :create
+  
   # GET /data_snippets
   # GET /data_snippets.xml
   def index
