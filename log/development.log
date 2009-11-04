@@ -1,0 +1,380 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (566.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (329.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatum (20091104110851)
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091104110851')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+/!\ FAILSAFE /!\  Wed Nov 04 06:22:31 -0500 2009
+  Status: 500 Internal Server Error
+  Access denied for user 'wase'@'localhost' (using password: YES)
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `real_connect'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Wed Nov 04 06:23:04 -0500 2009
+  Status: 500 Internal Server Error
+  Access denied for user 'wase'@'localhost' (using password: YES)
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `real_connect'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Wed Nov 04 06:23:06 -0500 2009
+  Status: 500 Internal Server Error
+  Access denied for user 'wase'@'localhost' (using password: YES)
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `real_connect'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-04 06:23:24) [GET]
+
+NameError (uninitialized constant DataController):
+  
+
+Rendered rescues/_trace (100.5ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataController#index (for 127.0.0.1 at 2009-11-04 06:23:44) [GET]
+  [4;36;1mDatum Load (0.0ms)[0m   [0;1mMysql::Error: Table 'wase_development.data' doesn't exist: SELECT * FROM `data` [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'wase_development.data' doesn't exist: SELECT * FROM `data` ):
+  app/controllers/data_controller.rb:5:in `index'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (187.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (207.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateDataSnippets (20091104112557)
+  [4;35;1mSQL (97.8ms)[0m   [0mCREATE TABLE `data_snippets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `body` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091104112557')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (24.5ms)[0m   [0;1mSHOW FIELDS FROM `data_snippets`[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mdescribe `data_snippets`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW KEYS FROM `data_snippets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#index (for 127.0.0.1 at 2009-11-04 06:28:08) [GET]
+  [4;36;1mDataSnippet Load (0.6ms)[0m   [0;1mSELECT * FROM `data_snippets` [0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/index
+Completed in 140ms (View: 72, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#new (for 127.0.0.1 at 2009-11-04 06:28:13) [GET]
+  [4;35;1mDataSnippet Columns (53.0ms)[0m   [0mSHOW FIELDS FROM `data_snippets`[0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/new
+Completed in 71ms (View: 14, DB: 53) | 200 OK [http://localhost/data_snippets/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#create (for 127.0.0.1 at 2009-11-04 06:28:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Ca2+RluW+XEVjVvAszTrVhuA1jffrcOdi13lmCEqMao=", "data_snippet"=>{"body"=>"[\"@ey-sort\", \"@ey-firsthalf\", \"@ey-firsthalf\", \"@engineyard\"]"}}
+  [4;36;1mDataSnippet Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `data_snippets`[0m
+  [4;35;1mSQL (112.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDataSnippet Create (0.3ms)[0m   [0;1mINSERT INTO `data_snippets` (`created_at`, `body`, `updated_at`) VALUES('2009-11-04 11:28:43', '[\"@ey-sort\", \"@ey-firsthalf\", \"@ey-firsthalf\", \"@engineyard\"]', '2009-11-04 11:28:43')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/data_snippets/1
+Completed in 126ms (DB: 116) | 302 Found [http://localhost/data_snippets]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#show (for 127.0.0.1 at 2009-11-04 06:28:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDataSnippet Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `data_snippets`[0m
+  [4;35;1mDataSnippet Load (0.9ms)[0m   [0mSELECT * FROM `data_snippets` WHERE (`data_snippets`.`id` = 1) [0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/show
+Completed in 20ms (View: 10, DB: 3) | 200 OK [http://localhost/data_snippets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#index (for 127.0.0.1 at 2009-11-04 06:31:35) [GET]
+  [4;36;1mDataSnippet Load (0.4ms)[0m   [0;1mSELECT * FROM `data_snippets` [0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/index
+  [4;35;1mDataSnippet Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `data_snippets`[0m
+
+ActionView::TemplateError (undefined method `data_snippet_path' for #<ActionView::Base:0x1032b4018>) on line #11 of app/views/data_snippets/index.html.erb:
+8: <% @data_snippets.each do |data_snippet| %>
+9:   <tr>
+10:     <td><%=h data_snippet.body %></td>
+11:     <td><%= link_to 'Show', data_snippet %></td>
+12:     <td><%= link_to 'Edit', edit_data_snippet_path(data_snippet) %></td>
+13:     <td><%= link_to 'Destroy', data_snippet, :confirm => 'Are you sure?', :method => :delete %></td>
+14:   </tr>
+
+    app/views/data_snippets/index.html.erb:11
+    app/views/data_snippets/index.html.erb:8:in `each'
+    app/views/data_snippets/index.html.erb:8
+    app/controllers/data_snippets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (50.9ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#index (for 127.0.0.1 at 2009-11-04 06:31:43) [GET]
+  [4;36;1mDataSnippet Load (0.3ms)[0m   [0;1mSELECT * FROM `data_snippets` [0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/index
+  [4;35;1mDataSnippet Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `data_snippets`[0m
+
+ActionView::TemplateError (undefined method `data_snippet_path' for #<ActionView::Base:0x1033fece8>) on line #11 of app/views/data_snippets/index.html.erb:
+8: <% @data_snippets.each do |data_snippet| %>
+9:   <tr>
+10:     <td><%=h data_snippet.body %></td>
+11:     <td><%= link_to 'Show', data_snippet %></td>
+12:     <td><%= link_to 'Edit', edit_data_snippet_path(data_snippet) %></td>
+13:     <td><%= link_to 'Destroy', data_snippet, :confirm => 'Are you sure?', :method => :delete %></td>
+14:   </tr>
+
+    app/views/data_snippets/index.html.erb:11
+    app/views/data_snippets/index.html.erb:8:in `each'
+    app/views/data_snippets/index.html.erb:8
+    app/controllers/data_snippets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (133.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-04 06:31:55) [GET]
+
+ActionController::RoutingError (No route matches "/datas" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#index (for 127.0.0.1 at 2009-11-04 06:32:14) [GET]
+  [4;36;1mDataSnippet Load (0.7ms)[0m   [0;1mSELECT * FROM `data_snippets` [0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/index
+  [4;35;1mDataSnippet Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `data_snippets`[0m
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#show (for 127.0.0.1 at 2009-11-04 06:32:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDataSnippet Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `data_snippets`[0m
+  [4;35;1mDataSnippet Load (45.8ms)[0m   [0mSELECT * FROM `data_snippets` WHERE (`data_snippets`.`id` = 1) [0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/show
+Completed in 58ms (View: 4, DB: 49) | 200 OK [http://localhost/data_snippets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#show to json (for 127.0.0.1 at 2009-11-04 06:34:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDataSnippet Columns (38.1ms)[0m   [0;1mSHOW FIELDS FROM `data_snippets`[0m
+  [4;35;1mDataSnippet Load (2.2ms)[0m   [0mSELECT * FROM `data_snippets` WHERE (`data_snippets`.`id` = 1) [0m
+Completed in 534ms (View: 18, DB: 40) | 200 OK [http://localhost/data_snippets/1.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#show (for 127.0.0.1 at 2009-11-04 06:36:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDataSnippet Columns (64.0ms)[0m   [0;1mSHOW FIELDS FROM `data_snippets`[0m
+  [4;35;1mDataSnippet Load (1.3ms)[0m   [0mSELECT * FROM `data_snippets` WHERE (`data_snippets`.`id` = 1) [0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/show
+Completed in 78ms (View: 8, DB: 65) | 200 OK [http://localhost/data_snippets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSnippetsController#index (for 127.0.0.1 at 2009-11-04 06:36:16) [GET]
+  [4;36;1mDataSnippet Load (0.4ms)[0m   [0;1mSELECT * FROM `data_snippets` [0m
+Rendering template within layouts/data_snippets
+Rendering data_snippets/index
+  [4;35;1mDataSnippet Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `data_snippets`[0m
+Completed in 99ms (View: 9, DB: 3) | 200 OK [http://localhost/]

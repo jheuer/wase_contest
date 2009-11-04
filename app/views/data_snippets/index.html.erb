@@ -1,0 +1,18 @@
+<h1>Data Snippets</h1>
+
+<table>
+  <tr>
+    <th>Body</th>
+  </tr>
+
+<% @data_snippets.each do |data_snippet| %>
+  <tr>
+    <td><%=h data_snippet.body %></td>
+    <td><%= link_to 'Show', data_snippet %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New data_snippet', new_data_snippet_path %>
