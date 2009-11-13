@@ -64,11 +64,13 @@ class DataSnippetsController < ApplicationController
 
     respond_to do |format|
       if @data_snippet.update_attributes(params[:data_snippet])
+        logger.info "success"
         flash[:notice] = 'DataSnippet was successfully updated.'
         format.html { redirect_to(@data_snippet) }
         format.xml  { head :ok }
         format.json  { head :ok }
       else
+        logger.info "fail"
         format.html { render :action => "edit" }
         format.xml  { render :xml => @data_snippet.errors, :status => :unprocessable_entity }
         format.json  { render :json => @data_snippet.errors, :status => :unprocessable_entity }
