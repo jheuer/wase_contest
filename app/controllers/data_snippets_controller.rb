@@ -67,9 +67,11 @@ class DataSnippetsController < ApplicationController
         flash[:notice] = 'DataSnippet was successfully updated.'
         format.html { redirect_to(@data_snippet) }
         format.xml  { head :ok }
+        format.json  { head :ok }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @data_snippet.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @data_snippet.errors, :status => :unprocessable_entity }
       end
     end
   end

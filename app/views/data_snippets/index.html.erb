@@ -2,11 +2,17 @@
 
 <table>
   <tr>
+    <th>Source</th>
+    <th>Timestamp</th>
+    <th>Result</th>
     <th>Body</th>
   </tr>
 
 <% @data_snippets.each do |data_snippet| %>
   <tr>
+    <td><%=h data_snippet.source %></td>
+    <td><%=h data_snippet.timestamp %></td>
+    <td><%=h data_snippet.result %></td>
     <td><%=h data_snippet.body %></td>
     <td><%= link_to 'Show', data_snippet %></td>
   </tr>
