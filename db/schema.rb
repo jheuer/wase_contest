@@ -9,10 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091104112557) do
+ActiveRecord::Schema.define(:version => 20091113195853) do
 
   create_table "data_snippets", :force => true do |t|
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "source"
+    t.integer  "timestamp"
+    t.text     "result"
+  end
+
+  create_table "followers", :force => true do |t|
+    t.string   "twitter_id"
+    t.string   "location"
+    t.decimal  "lat",        :precision => 15, :scale => 10
+    t.decimal  "lng",        :precision => 15, :scale => 10
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

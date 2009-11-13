@@ -1,0 +1,28 @@
+<p>
+  <b>Id:</b>
+  <%=h @follower.id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @follower.location %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%=h @follower.lat %>
+</p>
+
+<p>
+  <b>Lng:</b>
+  <%=h @follower.lng %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @follower.country %>
+</p>
+
+
+<%= link_to 'Edit', edit_follower_path(@follower) %> |
+<%= link_to 'Back', followers_path %>

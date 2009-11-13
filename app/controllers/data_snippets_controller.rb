@@ -1,5 +1,5 @@
 class DataSnippetsController < ApplicationController
-  protect_from_forgery :except => :create
+  protect_from_forgery :except => [:create, :update]
   
   # GET /data_snippets
   # GET /data_snippets.xml
@@ -20,7 +20,7 @@ class DataSnippetsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @data_snippet }
-      format.json { render :json => @data_snippet.body.to_json }
+      format.json { render :json => @data_snippet.attributes.to_json }
     end
   end
 
@@ -57,23 +57,23 @@ class DataSnippetsController < ApplicationController
     end
   end
 
-#  # PUT /data_snippets/1
-#  # PUT /data_snippets/1.xml
-#  def update
-#    @data_snippet = DataSnippet.find(params[:id])
-#
-#    respond_to do |format|
-#      if @data_snippet.update_attributes(params[:data_snippet])
-#        flash[:notice] = 'DataSnippet was successfully updated.'
-#        format.html { redirect_to(@data_snippet) }
-#        format.xml  { head :ok }
-#      else
-#        format.html { render :action => "edit" }
-#        format.xml  { render :xml => @data_snippet.errors, :status => :unprocessable_entity }
-#      end
-#    end
-#  end
-#
+  # PUT /data_snippets/1
+  # PUT /data_snippets/1.xml
+  def update
+    @data_snippet = DataSnippet.find(params[:id])
+
+    respond_to do |format|
+      if @data_snippet.update_attributes(params[:data_snippet])
+        flash[:notice] = 'DataSnippet was successfully updated.'
+        format.html { redirect_to(@data_snippet) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @data_snippet.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
 #  # DELETE /data_snippets/1
 #  # DELETE /data_snippets/1.xml
 #  def destroy
