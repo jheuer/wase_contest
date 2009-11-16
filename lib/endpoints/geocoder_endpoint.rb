@@ -4,8 +4,6 @@ require 'geokit'
 require 'json'
 
 class GeocoderEndpoint < WaseEndpoint
-  GOOGLE_KEY = 'ABQIAAAAGvvbnKyJxiZlROCpwEefYhQ331vdfzF-AHMPIYyzB-rTmE4rOBS_3vZpkeK4R6Svhdr1xdkGbSJiSA'
-  YAHOO_KEY = 'SWkWCRzV34F7VQxAN_wFeKH_NhsDRfuzHNyoRI4zeT.CB.Zi5TjlX4qygGOFdX.3fOEM'
   
   USE_CACHE = true
 
