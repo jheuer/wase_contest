@@ -1,6 +1,6 @@
 == Intro
 
-
+Below are twitter accounts which will performance various calculations when mentioned via twitter using the format described in the contest.
 
 == @twittter_wase
 
