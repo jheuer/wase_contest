@@ -1,18 +1,35 @@
 == Intro
 
 
-== @jeffheuer_wase
+
+== @twittter_wase
+
+Accepts an array of twitter ids and returns corresponding raw location strings for each id, where possible. (Note the 4th 't' in 'twittTer_wase', to get around twitter account naming restrictions.)
 
 == @geocoder_wase
 
+Accepts an array of twitter ids with locations and attempts to return latitude, longitude, country name, and country code, where possible.
+
 == @mass_wase
+
+Accepts an array of twitter ids with country codes and returns the total calculated mass based on average mass for that country code.
 
 == @centroid_wase
 
+Accepts an array of twitter ids with corresponding latitudes and longitudes, calculates the true 3D centroid of those points, then projects that point back out to the surface of the Earth, returning a latitude and longitude for the centroid.
+
 == @distance_wase
+
+Accepts a latitude and longitude, and returns the true spherical (Earth surface) distance from Chicago (lat 41 54 long 87 39) to the given point, in kilometers.
 
 == @speed_wase
 
+Accepts a distance in kilometers and returns a speed in meters per second, given travel since December 14th, 2005.
+
 == @bearing_wase
 
+Accepts a latitude and longitude, and returns the directional bearing in degrees from Chicago (lat 41 54 long 87 39) to the given point.
+
 == @momentum_wase
+
+Accepts a mass in kilograms, a bearing in degrees, and a position in latitude/longitude, and returns a text representation of the corresponding momentum.
