@@ -1,8 +1,0 @@
-<p>
-  <b>Body:</b>
-  <%=h @data_snippet.body %>
-</p>
-
-
-<%= link_to 'Edit', edit_data_snippet_path(@data_snippet) %> |
-<%= link_to 'Back', data_snippets_path %>
