@@ -15,7 +15,7 @@ class GeocoderEndpoint < WaseEndpoint
     if USE_CACHE
       follower_geolocations = JSON.parse(File.read('follower_geolocations.json'))
     else
-      Geokit::Geocoders::google = GOOGLE_KEY
+      Geokit::Geocoders::google = JSON.parse(File.read('google_key.json'))
     end    
     
     result = followers.map do |f|
