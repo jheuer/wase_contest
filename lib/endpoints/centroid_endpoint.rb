@@ -5,13 +5,6 @@ class CentroidEndpoint < WaseEndpoint
   
   EARTH_RADIUS_IN_KMS = 6360
 
-  # wisconsin, seattle, NC
-  TEST_POINTS = [
-    { :lat => 44.9799654000, :lng => -93.2638361000},
-    { :lat => 47.6062095000, :lng => -122.3320708000},
-    { :lat => 35.7915400000, :lng => -78.7811169000}
-  ]
-
   # see http://en.wikipedia.org/wiki/Spherical_coordinate_system
   # this algorithm treats the earth as perfectly spherical, which is not perfectly accurate
   def self.process(output, input1, input2)
